@@ -6,50 +6,107 @@
     <title>My CV</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<header>
-    <div class="header-container">
-        <div class="profile">
-            <p>Muhammad  </p>
-            <p>Azhar</p>
-            <img id="profile-pic" src="pfp.png" alt="Your Name">
-            <div id="introduction" class="hidden">Hello! I'm a passionate developer with experience in web technologies.</div>
-            
+<body>
+    <div class="cv-container">
+        <header>
+            <div class="header-left">
+                <h1>Muhammad <span class="bold">Azhar</span></h1>
+                <p>Web Developer</p>
+            </div>
+            <div class="header-right">
+                <img src="pfp.png" alt="Profile Picture" class="profile-img" id="profile">
+            </div>
+        </header>
+
+        <!-- Contact Info and Profile Section -->
+        <div class="contact-profile">
+            <section class="contact-info">
+                <p><span>&#9742;</span> 123-456-7890</p>
+                <p><span>&#9993;</span> email@example.com</p>
+                <p><span>&#127968;</span> 123 Anywhere St., Any City</p>
+                <p><span>&#128187;</span> website.com</p>
+            </section>
+            <section class="profile-description">
+                <h2>Profile</h2>
+                <p>I am a qualified and professional web developer with five years of experience in database administration and website design. Strong creative and analytical skills. Team player with an eye for detail.</p>
+            </section>
         </div>
 
+        <!-- Skills, Experience, and Education Sections -->
+        <div class="skills-experience">
+            <div class="column skills-education">
+                <!-- Skills Section -->
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Web Design</li>
+                        <li>Design Thinking</li>
+                        <li>Wireframe Creation</li>
+                        <li>Front End Coding</li>
+                        <li>Problem-Solving</li>
+                        <li>Computer Literacy</li>
+                        <li>Project Management Tools</li>
+                        <li>Strong Communication</li>
+                    </ul>
+                </section>
+                <!-- Education Section -->
+                <section class="education">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h3>Secondary School</h3>
+                        <p>Really Great High School</p>
+                        <p>2010 - 2014</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Bachelor of Technology</h3>
+                        <p>Really Great University</p>
+                        <p>2014 - 2016</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="column experience">
+                <h2>Experience</h2>
+                <div class="job">
+                    <h3>Applications Developer</h3>
+                    <p>Really Great Company</p>
+                    <p>2016 - Present</p>
+                    <ul>
+                        <li>Database administration and website design</li>
+                        <li>Built the logic for a streamlined ad-serving platform that scaled</li>
+                        <li>Educational institutions and online classroom management</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Web Content Manager</h3>
+                    <p>Really Great Company</p>
+                    <p>2014 - 2016</p>
+                    <ul>
+                        <li>Database administration and website design</li>
+                        <li>Built the logic for a streamlined ad-serving platform that scaled</li>
+                        <li>Educational institutions and online classroom management</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Analysis Content</h3>
+                    <p>Really Great Company</p>
+                    <p>2010 - 2014</p>
+                    <ul>
+                        <li>Database administration and website design</li>
+                        <li>Built the logic for a streamlined ad-serving platform that scaled</li>
+                        <li>Educational institutions and online classroom management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="intro" class="introduction">
+            <h3>Introduction</h3>
+            <p>Hello, I am a passionate web developer with a knack for creating modern, responsive websites. With experience in various technologies like JavaScript, CSS, and HTML, I strive to deliver quality user experiences.</p>
+        </div>
     </div>
-</header>
-<body>
-    <div class="container">
-        
-        <h1>Muhammad Azhar Aamir</h1>
-        
-        <section>
-            <h2>Qualifications</h2>
-            <ul>
-                <li>Bachelor's in Computer Science</li>
-                <li>Master's in Software Engineering</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>Work Experience</h2>
-            <ul>
-                <li>Company Mojang - Architecture Expert 2024</li>
-                <li>Esports tournament organizer - Twitch rivals 2023</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-        </section>
-    </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,13 @@
-const profilePic = document.getElementById('profile-pic');
-const introduction = document.getElementById('introduction');
+// Select the profile image and the introduction section
+const profileImage = document.getElementById('profile');
+const intro = document.getElementById('intro');
 
-profilePic.addEventListener('mouseover', () => {
-    introduction.style.display = 'block';
+// Show introduction on hover
+profileImage.addEventListener('mouseover', function() {
+    intro.classList.add('show-intro');
 });
 
-profilePic.addEventListener('mouseout', () => {
-    introduction.style.display = 'none';
+// Hide introduction when not hovering
+profileImage.addEventListener('mouseout', function() {
+    intro.classList.remove('show-intro');
 });
