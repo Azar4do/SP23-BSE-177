@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Nishat Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="checkout.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo-and-icons">
+                <a href="Assignment2.html">
+                    <img src="main_logo.png" class="header__normal-logo" width="120" height="40" alt="Main Logo">
+                </a>
+            </div>
+            <div class="header-icons">
+                <a href="#"><img src="header_icon_1.png" alt="Search Icon" class="header-icon"></a>
+                <a href="#"><img src="header_icon_2.png" alt="Logo Icon" class="header-icon"></a>
+                <a href="#"><img src="header_icon_3.png" alt="Tracking Icon" class="header-icon"></a>
+                <a href="#"><img src="header_icon_4.png" alt="Cart Icon" class="header-icon"></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">NEW IN</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">LUXURY</a></li>
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ACCESSORIES</a></li>
+                <li><a href="#" class="highlight">CLEARANCE SALE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Body Section -->
+    <main>
+        <section class="checkout-section">
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your home address" required>
+                    <span class="error-message" id="address-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                    <span class="error-message" id="city-error"></span>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Address</li>
+                        <li>Email</li>
+                        <li>Contact Number</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Catalogues</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Return & Exchange Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Subscribe to the newsletter</li>
+                        <li>
+                            <div class="newsletter-fields">
+                                <div class="newsletter-email">
+                                    <input type="email" name="contact[email]" placeholder="Your email address" required>
+                                </div>
+                                <div class="newsletter-btn">
+                                    <button type="submit" class="subscribe-btn">
+                                        <span>Subscribe</span>
+                                        <span class="loading-spinner" style="display: none;">
+                                            <svg width="16" height="16" aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 66 66">
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#">Facebook  </a><a href="#">Instagram  </a><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>Student Test Website © 2024 Nishat. All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img id="profile-pic" src="your-picture.jpg" alt="Your Name">
+            <div id="introduction" class="hidden">Hello! I'm a passionate developer with experience in web technologies.</div>
+        </div>
+        
+        <h1>Your Name</h1>
+        
+        <section>
+            <h2>Qualifications</h2>
+            <ul>
+                <li>Bachelor's in Computer Science</li>
+                <li>Master's in Software Engineering</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Work Experience</h2>
+            <ul>
+                <li>Company A - Position (Year)</li>
+                <li>Company B - Position (Year)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
