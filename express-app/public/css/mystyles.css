@@ -1,0 +1,507 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: white;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 100%; /* Full width of the container */
+    margin: 0 auto; /* Centers the header on the page */
+    padding: 20px; /* Adjust padding as needed */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Space between logo and icons */
+}
+    
+.header-icons {
+    display: flex; /* Arrange icons in a row */
+    gap: 10px; /* Adds space between icons */
+    align-items: center; /* Aligns icons vertically with the logo */
+}
+
+.logo-and-icons {
+    display: flex; /* Aligns logo and icons in a row */
+    justify-content: flex-start; /* Aligns logo to the start */
+    align-items: center; /* Aligns logo and icons vertically */
+    flex-grow: 1; /* Allows the logo to take available space */
+}
+
+.header-icon {
+    width: 30px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    margin-top: 10px; /* Adds space between icons and nav */
+}
+
+.nav-menu {
+    display: flex; /* Arranges the menu items in a row */
+    justify-content: center; /* Centers the menu items */
+    list-style: none; /* Removes bullet points */
+}
+
+.nav-menu li {
+    margin: 0 15px; /* Adds spacing between menu items */
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.highlight {
+    color: #dcb95f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .logo-and-icons {
+        justify-content: center; /* Center the logo on mobile */
+        width: 100%; /* Full width for logo */
+        margin-bottom: 10px; /* Space below logo */
+    }
+
+    .header-icons {
+        justify-content: space-between; /* Space icons evenly */
+        width: 100%; /* Full width for icons */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center menu items */
+        margin-top: 10px; /* Space above nav menu */
+    }
+
+    .nav-menu li {
+        margin: 5px 0; /* Adjust margin for vertical spacing */
+    }
+}
+
+/* Main Section */
+.main-banner {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 20px;
+}
+
+.banner-text h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.shop-now-btn {
+    padding: 10px 20px;
+    background-color: #dcb95f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: #c5a254;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item1 img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item1:hover {
+    border-radius: 15px;
+    background-color: black; /* Darker background on hover */
+    opacity: 70%;
+}
+
+.gallery-item p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.gallery-item a {
+    text-decoration: none; /* Remove underline from anchor tag */
+}
+
+.gallery-btn {
+    width: 100%; /* Make button width 100% to match image width */
+    margin-top: 0; /* Remove any margin */
+    padding: 10px 0; /* Adjust padding as needed, here it's vertical padding only */
+    background-color: white; /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    display: block; /* Make the button a block-level element */
+    text-align: center; /* Centers the button text */
+    transition: background-color 0.2s;
+}
+
+.gallery-btn:hover {
+    background-color: #c5a254; /* Darker background on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-column h3 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-column ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 2%;
+    margin-bottom: 50px;
+    margin-left: 18%;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    color: #5c5c5c;
+}
+
+/* Newsletter Section */    
+.newsletter {
+    margin-bottom: 20px; /* Space between the newsletter and the social media links */
+}
+
+.newsletter-fields {
+    display: flex; /* Aligns the input and button in a row */
+    justify-content: flex-start; /* Aligns items to the start */
+    border: 1px solid black; /* Add border around the whole field */
+    overflow: hidden; /* Ensure child elements don't overflow the border */
+}
+
+.newsletter-email {
+    flex: 1; /* Allows the input to take available space */
+}
+
+.newsletter-email input {
+    background-color: #f0f0f0;
+    padding: 10px; /* Padding inside the input */
+    border: none; /* Remove default border */
+    width: 100%; /* Takes full width */
+}
+
+.subscribe-btn {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #dcb95f; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.subscribe-btn:hover {
+    background-color: #c5a254; /* Darker background on hover */
+}
+
+.loading-spinner {
+    display: none; /* Hide the spinner initially */
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide the introduction by default */
+.introduction {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    z-index: 10;
+}
+
+/* Make it visible when the profile image is hovered */
+.show-intro {
+    display: block;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+
+}
+
+header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ececec;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 2px solid #ececec;
+}
+
+.header1-left h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header1-left p {
+    font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.contact-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 2px solid black;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.profile-description {
+    width: 70%;
+    border-left: 2px solid black;
+    padding-left: 20px;
+}
+
+.profile-description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.profile-description p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.skills-experience {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+   
+}
+
+.skills {
+    width: 100%;
+}
+
+.education {
+    width: 100%;
+    border-top: 2px solid black;
+    margin-top: 20px; /* To add some space between skills and education */
+}
+
+.experience {
+    border-left: 2px solid black;
+    padding-left: 20px;
+    width: 70%; /* Keeping experience wider than skills/education */
+}
+
+.skills h2,
+.experience h2,
+.education h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.experience .job {
+    margin-bottom: 20px;
+}
+
+.experience h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.experience p {
+    margin-bottom: 5px;
+    color: #777;
+}
+
+.experience ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.experience ul li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+
+.education .education-item {
+    margin-bottom: 20px;
+}
+
+.education h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.education p {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.introduction {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    z-index: 10;
+}
+
+.introduction h3 {
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 0.9rem;
+}
