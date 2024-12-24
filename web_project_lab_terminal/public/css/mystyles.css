@@ -1,0 +1,207 @@
+
+.header-icon {
+    width: 30px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and background */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  #product-title {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+  }
+  
+
+  /* Navbar styling */
+  .navbar {
+    background: linear-gradient(to right, #5c4d28, #dcb95f); /* Green gradient background */
+    padding: 1rem;
+  }
+
+  /* Navbar brand (Azarbuy) */
+  .navbar-brand {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  
+  /* Navbar brand hover effect */
+  .navbar-brand:hover {
+    color: #dcb95f;
+  }
+  
+  /* Navbar links */
+  .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  
+  /* Active link styling */
+  .navbar-nav .nav-item .nav-link.active {
+    color: #dcb95f; /* Golden color for active links */
+    font-weight: bold;
+  }
+  
+  /* Hover effect for links */
+  .navbar-nav .nav-item .nav-link:hover {
+    background-color: #3d3d3d;
+    opacity: 80%;
+    border-radius: 2px;
+  }
+  
+  /* Navbar collapse (for mobile view) */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #ffffff;
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+    
+    .navbar {
+      padding: 0.8rem;
+    }
+  }
+  
+/* General Page Layout */
+
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item .page-link {
+  
+  background-color: #dcb95f;
+  color: white;
+  border-radius: 5px; 
+  margin: 0 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.page-item .page-link:hover {
+  background-color: #9e8544;
+  color: white;
+}
+
+/* Button Styling */
+.btn-info {
+  background-color: #dcb95f;
+  color: white;
+  border-radius: 2px;
+  margin: 0px 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-info:hover {
+  background-color: #b89a50 ;
+  color: white;
+}
+
+.btn-warning, .btn-danger {
+  color: white;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.btn-warning {
+  background-color: #dcb95f;
+}
+
+.btn-danger {
+  background-color: #dcb95f;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Table Styling */
+.table {
+  margin: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.table img {
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .pagination {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+
+  .table th, .table td {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+
+  .btn-info, .btn-warning, .btn-danger {
+      width: 100%;
+      margin: 5px 0;
+  }
+}

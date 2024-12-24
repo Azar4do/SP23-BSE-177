@@ -1,0 +1,22 @@
+<h2>category</h2>
+
+<link rel="stylesheet" href="/css/admin.css" />
+
+<!-- Form to add new category -->
+<form action="/admin/category" method="POST">
+    <input type="text" name="title" placeholder="category Name" required>
+    <button type="submit">Add category</button>
+</form>
+
+<!-- List of category with Edit and Delete options -->
+<ul>
+    <% for(index=0;index<category.length;index++){ %>
+        <li1>
+            <%= category[index].title %>
+            
+            <!-- Edit Button -->
+            <a href="/admin/category/edit/<%= category[index]._id %>" >Edit</a>
+            <a href="/admin/category/delete/<%= category[index]._id %>"  >Delete</a>
+        </li1>
+    <% } %>
+</ul>

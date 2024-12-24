@@ -1,0 +1,86 @@
+<h2>Products</h2>
+
+<link rel="stylesheet" href="/css/admin.css" />
+
+<!-- Form to add a new product -->
+<form action="/admin/products" method="POST">
+  <input type="text" name="name" placeholder="Product Name" required>
+  <input type="number" name="price" placeholder="Price" required>
+  <button type="submit">Add Product</button>
+</form>
+
+<!-- Search, Sort, and Filter Form -->
+<form method="GET" action="/admin/products">
+  <div>
+    <!-- Search Bar -->
+    <input type="text" name="search" placeholder="Search Products" value="<%= searchQuery %>" />
+
+    <!-- Sort Dropdown -->
+    <select name="sort">
+      <option value="name" <%= sortField === "name" ? "selected" : "" %>>Name</option>
+      <option value="price" <%= sortField === "price" ? "selected" : "" %>>Price</option>
+    </select>
+
+    <!-- Sort Order -->
+    <select name="order">
+      <option value="asc" <%= sortOrder === "asc" ? "selected" : "" %>>Ascending</option>
+      <option value="desc" <%= sortOrder === "desc" ? "selected" : "" %>>Descending</option>
+    </select>
+
+    <!-- Price Filter -->
+    <input type="number" name="price" placeholder="Max Price" value="<%= priceFilter %>" />
+
+    <button type="submit">Apply</button>
+  </div>
+</form>
+
+<!-- List of Products -->
+<ul>
+  <% if (products.length > 0) { %>
+    <% for (let product of products) { %>
+      <li>
+        <%= product.name %> - $<%= product.price %>
+        <a href="/admin/products/edit/<%= product._id %>">Edit</a>
+        <form action="/admin/products/delete/<%= product._id %>" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% } %>
+  <% } else { %>
+    <li>No products found.</li>
+  <% } %>
+</ul>
+
+<!-- File Upload Form -->
+<form action="/admin/products/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="profileImage" />
+  <button type="submit">Upload</button>
+</form>
+
+<!-- Pagination -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <!-- Previous Button -->
+    <li class="page-item <%= page == 1 ? 'disabled' : '' %>">
+      <a class="page-link" href="/admin/products?page=<%= page - 1 %>&search=<%= searchQuery %>&sort=<%= sortField %>&order=<%= sortOrder %>&price=<%= priceFilter %>">
+        Previous
+      </a>
+    </li>
+
+    <!-- Page Numbers -->
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= page == i ? 'active' : '' %>">
+        <a class="page-link" href="/admin/products?page=<%= i %>&search=<%= searchQuery %>&sort=<%= sortField %>&order=<%= sortOrder %>&price=<%= priceFilter %>">
+          <%= i %>
+        </a>
+      </li>
+    <% } %>
+
+    <!-- Next Button -->
+    <li class="page-item <%= page == totalPages ? 'disabled' : '' %>">
+      <a class="page-link" href="/admin/products?page=<%= page + 1 %>&search=<%= searchQuery %>&sort=<%= sortField %>&order=<%= sortOrder %>&price=<%= priceFilter %>">
+        Next
+      </a>
+    </li>
+  </ul>
+</nav>

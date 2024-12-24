@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Form Styling */
+form {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Search and Filter Form */
+form div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form div input,
+form div select {
+  flex: 1 1 200px;
+  margin-right: 10px;
+}
+
+form div input:last-child,
+form div select:last-child {
+  margin-right: 0;
+}
+
+/* List of Products */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h2{
+  padding-left: 20px;
+}
+
+li1 {
+  padding-left: 40px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: #b89a4f;
+  text-decoration: underline;
+}
+
+form[action*="delete"] button {
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-item a {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  color: #b89a4f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.page-item.active a {
+  background: #b89a4f;
+  color: white;
+}
+
+.page-item.disabled a {
+  background: #ccc;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.page-item a:hover {
+  background: #7c6835;
+  color: white;
+}
+
+/* File Upload */
+form input[type="file"] {
+  margin-top: 10px;
+}
+
+form button[type="submit"] {
+  background: #b89a4f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background: #7c6835;
+}

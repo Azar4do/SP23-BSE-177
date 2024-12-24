@@ -1,0 +1,20 @@
+<h2>Edit Category</h2>
+
+  <!-- Form to edit category details -->
+  <form action="/admin/category/edit/<%= category._id %>" method="POST">
+    <!-- Input for category name, pre-filled with current name -->
+    <div>
+      <label for="name">Category Name</label>
+      <input type="text" id="name" name="name" value="<%= category.title %>" required>
+    </div>
+
+    <!-- Submit button to update the category -->
+    <div>
+      <button type="submit">Update Category</button>
+    </div>
+  </form>
+
+  <!-- Cancel button -->
+  <div>
+    <a href="/admin/category">Cancel</a>
+  </div>

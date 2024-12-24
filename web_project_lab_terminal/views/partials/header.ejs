@@ -1,0 +1,103 @@
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <ul class="nav">
+                        <li class="logo"><a href="#"><img src="/images/header_icon_1.png" alt="Search Icon" class="active header-icon"></a></li>
+                        <li class="logo">
+                            <a href="/login">
+                              <button class="header-login-button">
+                                <img src="/images/header_icon_2.png" alt="Search Icon" class="active header-icon">
+                              </button>
+                            </a>
+                          </li>
+                          <li class="logo"><a href="#"><img src="/images/header_icon_3.png" alt="Search Icon" class="active header-icon"></a></li>
+                          <li class="logo">
+                            <a href="#">
+                                <img src="/images/header_icon_4.png" alt="Cart Icon" class="header-icon">
+                                <span id="cart-count" class="cart-badge">0</span>
+                            </a>
+                        </li>
+                    </ul>        
+                </nav>
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="" class="logo">
+                        <img src="/images/main_logo.png">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="/home" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#men">Men's</a></li>
+                        <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                        <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                        <li class="submenu">
+                            <a href="javascript:;">Pages</a>
+                            <ul>
+                                <li><a href="/about_us.ejs">About Us</a></li>
+                                <li><a href="/products.ejs">Products</a></li>
+                                <li><a href="/single_product.ejs">Single Product</a></li>
+                                <li><a href="/contact_us.ejs">Contact Us</a></li>
+                                <li><a href="/admin/dashboard">Admin Panel</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:;">Features</a>
+                            <ul>
+                                <li><a href="#">To be updated</a></li>
+                                <li><a href="#">To be updated</a></li>
+                                <li><a href="#">To be updated</a></li>
+                                <li><a href="#">To be updated</a></li>
+                            </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="/views/landing_page.ejs#explore">Explore</a></li>
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+                <!-- ***** Menu End ***** -->
+                
+                <!-- Display user name if logged in -->
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the cart count from localStorage, or default to 0 if not found
+        let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
+
+        // Function to update cart count and localStorage
+        function updateCartCount() {
+            const cartBadge = document.getElementById('cart-count');
+            if (cartBadge) {
+                cartBadge.textContent = cartCount;
+                cartBadge.style.display = cartCount > 0 ? 'inline' : 'none';
+            }
+
+            // Store the updated cart count in localStorage
+            localStorage.setItem('cartCount', cartCount);
+        }
+
+        // Function to increment cart count (simulate adding an item to the cart)
+        function incrementCart() {
+            cartCount += 1; // Increment the cart count by 1
+            updateCartCount(); // Update the cart badge and localStorage
+        }
+
+        // Function to decrement cart count (simulate removing an item from the cart)
+        function decrementCart() {
+            if (cartCount > 0) {
+                cartCount -= 1; // Decrease the cart count by 1
+                updateCartCount(); // Update the cart badge and localStorage
+            }
+        }
+
+        // Initialize the cart count correctly on page load
+        updateCartCount();
+    </script>
+</header>

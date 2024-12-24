@@ -1,0 +1,34 @@
+<!-- views/user/login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script>
+    // Client-side validation
+    function validateForm() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      if (!username || !password) {
+        alert("Both username and password are required.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form action="/user/login" method="POST" onsubmit="return validateForm()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
